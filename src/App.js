@@ -8,13 +8,19 @@ import {
 // importing pages 
 import Index from './pages/index'
 
+// importing components
+import Navbar from './components/navbar'
+
 const App = props => {
   return (
     <div>
 
       <Router>
         <Switch>
-          <Route exact path="/" component={Index} />
+          <Route exact path="/">
+            <Navbar />
+            <Index />
+          </Route>
         </Switch>
       </Router>
 
