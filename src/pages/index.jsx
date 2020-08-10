@@ -71,22 +71,10 @@ const Index = props => {
                             <Typography align="center" variant="h3">
                                 Microsoft Community
                         </Typography>
-<<<<<<< HEAD
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h5">
-                           <span style={{color:'red'}}> Chandigarh</span> University
-                        </Typography>
-                    </Grid><br/>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h5">
-                        Be a force for good-locally and globally
-=======
                         </Grid>
                         <Grid item xs={12}>
                             <Typography align="center" variant="h5">
-                                Chandigarh University
->>>>>>> 8e10ddfa5cd822fa2bf8c41bf1d879c07e14880c
+                               <span style={{color:"red"}}> Chandigarh</span> University
                         </Typography>
                         </Grid>
                     </Grid>
