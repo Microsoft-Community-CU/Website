@@ -21,9 +21,9 @@ const useStyle = makeStyles(theme => ({
     mtSmall: {
         marginTop: theme.spacing(2)
     },
-    logo:{
+    logo: {
         width: '260px',
-        [theme.breakpoints.up('lg')]:{
+        [theme.breakpoints.up('lg')]: {
             width: '320px'
         }
     }
@@ -47,7 +47,7 @@ const Index = props => {
                                     duration: 1
                                 }}
                             >
-                                <img src={Logo} alt="" className={classes.logo}/>
+                                <img src={Logo} alt="" className={classes.logo} />
                             </motion.div>
                         </center>
                     </Grid>
@@ -83,20 +83,20 @@ const Index = props => {
                         </Typography>
                         </Grid>
                         <Grid item xs={12}>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: 4,
-                                duration: 1
-                            }}
-                        >
-                            <Typography align="center" variant="h6">
-                            Be a force for good-locally and globally
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: 4,
+                                    duration: 1
+                                }}
+                            >
+                                <Typography align="center" variant="h6">
+                                    Be a force for good-locally and globally
                         </Typography>
-                        </motion.div>
+                            </motion.div>
                         </Grid>
-                        
+
 
                     </Grid>
                 </motion.div>
