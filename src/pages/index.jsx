@@ -78,9 +78,9 @@ const Index = props => {
                     <Grid container spacing={1} className={classes.mtSmall}>
                         <Grid item xs={12}>
                             <Typography align="center" variant="h3">
-                                Microsoft Community
+                                Microsoft Community<br/>
+                                <span style={{color:'red'}}>Chandigarh</span> University
                         </Typography>
-<<<<<<< HEAD
                         </Grid>
                         <Grid item xs={12}>
                         <motion.div
@@ -93,17 +93,6 @@ const Index = props => {
                         >
                             <Typography align="center" variant="h6">
                             Be a force for good-locally and globally
-=======
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h5">
-                           <span style={{color:'red'}}> Chandigarh</span> University
-                        </Typography>
-                    </Grid><br/>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h5">
-                        Be a force for good-locally and globally
->>>>>>> e15091b5575dbffd9644cc1b96f8ab4ef31488d5
                         </Typography>
                         </motion.div>
                         </Grid>
