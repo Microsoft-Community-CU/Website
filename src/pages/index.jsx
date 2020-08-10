@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 
 // importing images 
-import Logo from '../images/logo.png'
+import Logo from '../images/logo.svg'
 
 const useStyle = makeStyles(theme => ({
     root: {
@@ -29,7 +29,7 @@ const Index = props => {
                 <Grid container spacing={4}>
                     <Grid item xs={12}>
                         <center>
-                            <img src={Logo} alt="" width="30%" />
+                            <img src={Logo} alt="" />
                         </center>
                     </Grid>
                     <Grid item xs={12}>
@@ -47,7 +47,12 @@ const Index = props => {
                     </Grid>
                     <Grid item xs={12}>
                         <Typography align="center" variant="h5">
-                            Chandigarh University
+                           <span style={{color:'red'}}> Chandigarh</span> University
+                        </Typography>
+                    </Grid><br/>
+                    <Grid item xs={12}>
+                        <Typography align="center" variant="h5">
+                        Be a force for good-locally and globally
                         </Typography>
                     </Grid>
                 </Grid>
