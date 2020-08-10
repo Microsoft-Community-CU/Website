@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {
     nameHandle
 } from '../../redux/actions/core.team.form'
+import { motion } from 'framer-motion'
 
 import {
     Container,
@@ -47,23 +48,29 @@ const Name = props => {
                         />
                     </FormControl>
 
-                    {(props.name === '') ? null : <Grid container spacing={2}>
-                        <Grid item >
-                            <Button
-                                style={{ marginTop: '8px' }}
-                                endIcon={<Check />}
-                                variant="contained"
-                                color="primary"
-                            >
-                                OK
+                    {(props.name === '') ? null : <motion.div
+                    initial={{y: 20}}
+                    animate={{y: 0}}
+                    transition={{ease: "easeOut"}}
+                    >
+                        <Grid container spacing={2}>
+                            <Grid item >
+                                <Button
+                                    style={{ marginTop: '8px' }}
+                                    endIcon={<Check />}
+                                    variant="contained"
+                                    color="primary"
+                                >
+                                    OK
                                 </Button>
-                        </Grid>
-                        <Grid item >
-                            <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
-                                press Enter
+                            </Grid>
+                            <Grid item >
+                                <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                    press Enter
                                 </Typography>
+                            </Grid>
                         </Grid>
-                    </Grid>}
+                    </motion.div>}
 
 
                 </Grid>
