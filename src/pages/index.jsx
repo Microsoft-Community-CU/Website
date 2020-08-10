@@ -31,8 +31,8 @@ const Index = props => {
                     <Grid item xs={12}>
                         <center>
                             <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
+                                initial={{ opacity: 0, y: -100 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     delay: 1,
                                     duration: 1
@@ -59,8 +59,8 @@ const Index = props => {
                 </Grid>
 
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{
                         delay: 3,
                         duration: 1
