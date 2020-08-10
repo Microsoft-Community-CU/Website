@@ -1,0 +1,10 @@
+.s::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+}
+
+.s {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: hidden;
+}

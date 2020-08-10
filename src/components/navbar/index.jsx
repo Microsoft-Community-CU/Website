@@ -25,7 +25,7 @@ const Navbar = props => {
 
     return (
         <div className={classes.root}>
-            <AppBar color="transparent" elevation="0">
+            <AppBar color="transparent" elevation="0" position="sticky">
                 <Toolbar>
                     <div className={classes.root} />
                     <IconButton

@@ -5,7 +5,8 @@ import {
     Container,
     makeStyles,
     Typography,
-    Grid
+    Grid,
+    Divider
 } from '@material-ui/core'
 
 // importing images 
@@ -25,6 +26,13 @@ const useStyle = makeStyles(theme => ({
         width: '260px',
         [theme.breakpoints.up('lg')]: {
             width: '320px'
+        }
+    },
+    section: {
+        marginTop: theme.spacing(22),
+        marginBottom: theme.spacing(12),
+        [theme.breakpoints.up('lg')]: {
+            marginTop: theme.spacing(42)
         }
     }
 }))
@@ -100,6 +108,26 @@ const Index = props => {
 
                     </Grid>
                 </motion.div>
+
+
+
+                <div className={classes.section}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <Typography variant="h4" align="center">
+                                Core Team Applications Open
+                            </Typography>
+                            
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            <Typography variant="h5" align="center" color="primary">
+                                Apply now
+                            </Typography>
+                            
+                        </Grid>
+                    </Grid>
+                </div>
             </Container>
         </div>
     )
