@@ -1,4 +1,8 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {
+    toggleDrawer
+} from '../../redux/actions/ui'
 
 import {
     AppBar,
@@ -24,7 +28,9 @@ const Navbar = props => {
             <AppBar color="transparent" elevation="0">
                 <Toolbar>
                     <div className={classes.root} />
-                    <IconButton>
+                    <IconButton
+                    onClick={props.toggleDrawer}
+                    >
                         <Menu />
                     </IconButton>
                 </Toolbar>
@@ -33,4 +39,10 @@ const Navbar = props => {
     )
 }
 
-export default Navbar
+const mapDispatchToProps = dispatch => {
+    return {
+        toggleDrawer: () => {dispatch(toggleDrawer())}
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Navbar)

@@ -10,6 +10,7 @@ import Index from './pages/index'
 
 // importing components
 import Navbar from './components/navbar'
+import Drawer from './components/drawer'
 
 const App = props => {
   return (
@@ -22,6 +23,7 @@ const App = props => {
             <Index />
           </Route>
         </Switch>
+        <Drawer />
       </Router>
 
     </div>
