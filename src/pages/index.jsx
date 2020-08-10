@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import {
     Container,
@@ -29,28 +30,55 @@ const Index = props => {
                 <Grid container spacing={4}>
                     <Grid item xs={12}>
                         <center>
-                            <img src={Logo} alt="" width="30%" />
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: 1,
+                                    duration: 1
+                                }}
+                            >
+                                <img src={Logo} alt="" width="30%" />
+                            </motion.div>
                         </center>
                     </Grid>
                     <Grid item xs={12}>
-                        <Typography align="center" variant="h6">
-                            Presents
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: 2,
+                                duration: 1
+                            }}
+                        >
+                            <Typography align="center" variant="h6">
+                                Presents
                         </Typography>
+                        </motion.div>
                     </Grid>
                 </Grid>
 
-                <Grid container spacing={1} className={classes.mtSmall}>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h3">
-                            Microsoft Community
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        delay: 3,
+                        duration: 1
+                    }}
+                >
+                    <Grid container spacing={1} className={classes.mtSmall}>
+                        <Grid item xs={12}>
+                            <Typography align="center" variant="h3">
+                                Microsoft Community
                         </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography align="center" variant="h5">
-                            Chandigarh University
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography align="center" variant="h5">
+                                Chandigarh University
                         </Typography>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </motion.div>
             </Container>
         </div>
     )
