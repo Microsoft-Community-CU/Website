@@ -13,10 +13,19 @@ import Logo from '../images/logo.svg'
 
 const useStyle = makeStyles(theme => ({
     root: {
-        marginTop: theme.spacing(22)
+        marginTop: theme.spacing(22),
+        [theme.breakpoints.up('lg')]: {
+            marginTop: theme.spacing(32)
+        }
     },
     mtSmall: {
         marginTop: theme.spacing(2)
+    },
+    logo:{
+        width: '260px',
+        [theme.breakpoints.up('lg')]:{
+            width: '320px'
+        }
     }
 }))
 
@@ -38,7 +47,7 @@ const Index = props => {
                                     duration: 1
                                 }}
                             >
-                                <img src={Logo} alt=""/>
+                                <img src={Logo} alt="" className={classes.logo}/>
                             </motion.div>
                         </center>
                     </Grid>
@@ -71,6 +80,7 @@ const Index = props => {
                             <Typography align="center" variant="h3">
                                 Microsoft Community
                         </Typography>
+<<<<<<< HEAD
                         </Grid>
                         <Grid item xs={12}>
                         <motion.div
@@ -83,6 +93,17 @@ const Index = props => {
                         >
                             <Typography align="center" variant="h6">
                             Be a force for good-locally and globally
+=======
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography align="center" variant="h5">
+                           <span style={{color:'red'}}> Chandigarh</span> University
+                        </Typography>
+                    </Grid><br/>
+                    <Grid item xs={12}>
+                        <Typography align="center" variant="h5">
+                        Be a force for good-locally and globally
+>>>>>>> e15091b5575dbffd9644cc1b96f8ab4ef31488d5
                         </Typography>
                         </motion.div>
                         </Grid>
