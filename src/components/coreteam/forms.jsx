@@ -1,11 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import {
     nameHandle,
     positionHandle,
     emailHandle,
     githubHandle,
-    linkedinHandle
+    linkedinHandle,
+    sybmitForm
 } from '../../redux/actions/core.team.form'
 import { motion } from 'framer-motion'
 
@@ -284,6 +286,7 @@ const Position = props => {
                                 <MenuItem value={1}>Content Writer</MenuItem>
                                 <MenuItem value={2}>Social media marketing</MenuItem>
                                 <MenuItem value={3}>Graphic designer</MenuItem>
+                                <MenuItem value={4}>Developer</MenuItem>
                             </Select>
                         </FormControl>
 
@@ -320,11 +323,29 @@ const Position = props => {
     )
 }
 
+const Complete = props => {
+
+    return <Redirect path="/" />
+}
+
 const Index = props => {
 
     const classes = useStyle()
 
     const [state, setState] = React.useState(1)
+
+    const postionParser = pos => {
+        switch (pos) {
+            case 1:
+                return 'Content Writer'
+            case 2:
+                return 'Social media marketing'
+            case 3:
+                return 'Graphic designer'
+            case 4:
+                return 'Developer'
+        }
+    }
 
     const comp = () => {
         switch (state) {
@@ -338,6 +359,10 @@ const Index = props => {
                 return <Github number={state} github={props.github} handler={props.githubHandler} next={nextQuestion} />
             case 5:
                 return <Linkedin number={state} linkedin={props.linkedin} handler={props.linkedinhandler} next={nextQuestion} />
+            case 6:
+                let x = postionParser(props.position)
+                props.submitForm(props.name, props.email, x, props.github, props.linkedin)
+                return <Complete />
         }
     }
 
@@ -368,7 +393,8 @@ const mapDispatchToProps = dispatch => {
         positionHandler: (position) => { dispatch(positionHandle(position)) },
         emailHandler: (email) => { dispatch(emailHandle(email)) },
         githubHandler: (github) => { dispatch(githubHandle(github)) },
-        linkedinhandler: (linkedin) => { dispatch(linkedinHandle(linkedin)) }
+        linkedinhandler: (linkedin) => { dispatch(linkedinHandle(linkedin)) },
+        submitForm: (name, email, position, github, linkedin) => { dispatch(sybmitForm(name, email, position, github, linkedin)) }
     }
 }
 
