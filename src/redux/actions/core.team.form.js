@@ -49,12 +49,10 @@ const sybmitForm = (name, email, position, github, linkedin) => {
             apiKey: process.env.REACT_APP_AIRTABLE_API_KEY
         }).base(process.env.REACT_APP_BASE_NAME)
 
-        let pos
-
         base('Table 1').create([{
             "fields": {
                 "Name": name,
-                "Position": [pos],
+                "Position": [position],
                 "Email": email,
                 "Github Id": github,
                 "Linkdin Id": linkedin
@@ -77,5 +75,6 @@ export {
     positionHandle,
     emailHandle,
     githubHandle,
-    linkedinHandle
+    linkedinHandle,
+    sybmitForm
 }
