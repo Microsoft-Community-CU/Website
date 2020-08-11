@@ -37,49 +37,55 @@ const Name = props => {
 
     return (
         <div>
-            <Grid container spacing={5}>
-                <Grid item xs={12}>
-                    <Typography variant="h5">
-                        <spa>{props.number}. Can we get your full name</spa>
-                    </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                    <FormControl fullWidth>
-                        <TextField
-                            placeholder="Type your answer here"
-                            value={props.name}
-                            onChange={e => { props.handler(e.target.value) }}
-                        />
-                    </FormControl>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            <spa>{props.number}. Can we get your full name</spa>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <FormControl fullWidth>
+                            <TextField
+                                placeholder="Type your answer here"
+                                value={props.name}
+                                onChange={e => { props.handler(e.target.value) }}
+                            />
+                        </FormControl>
 
-                    {(props.name === '') ? null : <motion.div
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        transition={{ ease: "easeOut" }}
-                    >
-                        <Grid container spacing={2}>
-                            <Grid item >
-                                <Button
-                                    style={{ marginTop: '8px' }}
-                                    endIcon={<Check />}
-                                    variant="contained"
-                                    color="primary"
-                                    onClick={props.next}
-                                >
-                                    OK
+                        {(props.name === '') ? null : <motion.div
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ ease: "easeOut" }}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item >
+                                    <Button
+                                        style={{ marginTop: '8px' }}
+                                        endIcon={<Check />}
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={props.next}
+                                    >
+                                        OK
                                 </Button>
-                            </Grid>
-                            <Grid item >
-                                <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
-                                    press Enter
+                                </Grid>
+                                <Grid item >
+                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                        press Enter
                                 </Typography>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </motion.div>}
+                        </motion.div>}
 
 
+                    </Grid>
                 </Grid>
-            </Grid>
+            </motion.div>
         </div>
     )
 }
@@ -88,7 +94,11 @@ const Email = props => {
 
     return (
         <div>
-            <Container>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
                 <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h5">
@@ -131,7 +141,7 @@ const Email = props => {
                         </motion.div>}
                     </Grid>
                 </Grid>
-            </Container>
+            </motion.div>
         </div>
     )
 }
@@ -140,7 +150,11 @@ const Github = props => {
 
     return (
         <div>
-            <Container>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
                 <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h5">
@@ -184,7 +198,7 @@ const Github = props => {
 
                     </Grid>
                 </Grid>
-            </Container>
+            </motion.div>
         </div>
     )
 }
@@ -192,7 +206,11 @@ const Github = props => {
 const Linkedin = props => {
     return (
         <div>
-            <Container>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
                 <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h5">
@@ -235,7 +253,7 @@ const Linkedin = props => {
                         </motion.div>}
                     </Grid>
                 </Grid>
-            </Container>
+            </motion.div>
         </div>
     )
 }
@@ -244,7 +262,11 @@ const Position = props => {
 
     return (
         <div>
-            <Container>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
                 <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h5">
@@ -293,7 +315,7 @@ const Position = props => {
 
                     </Grid>
                 </Grid>
-            </Container>
+            </motion.div>
         </div>
     )
 }
