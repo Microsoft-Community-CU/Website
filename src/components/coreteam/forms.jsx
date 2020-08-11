@@ -1,7 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {
-    nameHandle
+    nameHandle,
+    positionHandle,
+    emailHandle,
+    githubHandle,
+    linkedinHandle
 } from '../../redux/actions/core.team.form'
 import { motion } from 'framer-motion'
 
@@ -49,9 +53,9 @@ const Name = props => {
                     </FormControl>
 
                     {(props.name === '') ? null : <motion.div
-                    initial={{y: 20}}
-                    animate={{y: 0}}
-                    transition={{ease: "easeOut"}}
+                        initial={{ y: 20 }}
+                        animate={{ y: 0 }}
+                        transition={{ ease: "easeOut" }}
                     >
                         <Grid container spacing={2}>
                             <Grid item >
@@ -60,6 +64,7 @@ const Name = props => {
                                     endIcon={<Check />}
                                     variant="contained"
                                     color="primary"
+                                    onClick={props.next}
                                 >
                                     OK
                                 </Button>
@@ -84,14 +89,46 @@ const Email = props => {
     return (
         <div>
             <Container>
-                <Grid container spacing={2}>
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            <spa>{props.number}. Enter your email</spa>
+                        </Typography>
+                    </Grid>
+
                     <Grid item xs={12}>
                         <FormControl fullWidth>
                             <TextField
-                                variant="outlined"
-                                label="Email"
+                                placeholder="Type your answer here"
+                                value={props.email}
+                                onChange={e => { props.handler(e.target.value) }}
                             />
                         </FormControl>
+
+                        {(props.email === '') ? null : <motion.div
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ ease: "easeOut" }}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item >
+                                    <Button
+                                        style={{ marginTop: '8px' }}
+                                        endIcon={<Check />}
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={props.next}
+                                    >
+                                        OK
+                                </Button>
+                                </Grid>
+                                <Grid item >
+                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                        press Enter
+                                </Typography>
+                                </Grid>
+                            </Grid>
+                        </motion.div>}
                     </Grid>
                 </Grid>
             </Container>
@@ -104,14 +141,47 @@ const Github = props => {
     return (
         <div>
             <Container>
-                <Grid container spacing={2}>
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            <spa>{props.number}. Enter your Github Profile</spa>
+                        </Typography>
+                    </Grid>
+
                     <Grid item xs={12}>
                         <FormControl fullWidth>
                             <TextField
-                                variant="outlined"
-                                label="Github Id"
+                                placeholder="Type your answer here"
+                                value={props.github}
+                                onChange={e => { props.handler(e.target.value) }}
                             />
                         </FormControl>
+
+                        {(props.github === '') ? null : <motion.div
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ ease: "easeOut" }}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item >
+                                    <Button
+                                        style={{ marginTop: '8px' }}
+                                        endIcon={<Check />}
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={props.next}
+                                    >
+                                        OK
+                                </Button>
+                                </Grid>
+                                <Grid item >
+                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                        press Enter
+                                </Typography>
+                                </Grid>
+                            </Grid>
+                        </motion.div>}
+
                     </Grid>
                 </Grid>
             </Container>
@@ -123,14 +193,46 @@ const Linkedin = props => {
     return (
         <div>
             <Container>
-                <Grid container spacing={2}>
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            <spa>{props.number}. Enter your Linkedin Profile</spa>
+                        </Typography>
+                    </Grid>
+
                     <Grid item xs={12}>
                         <FormControl fullWidth>
                             <TextField
-                                variant="outlined"
-                                label="Linkedin Id"
+                                placeholder="Type your answer here"
+                                value={props.linkedin}
+                                onChange={e => { props.handler(e.target.value) }}
                             />
                         </FormControl>
+
+                        {(props.linkedin === '') ? null : <motion.div
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ ease: "easeOut" }}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item >
+                                    <Button
+                                        style={{ marginTop: '8px' }}
+                                        endIcon={<Check />}
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={props.next}
+                                    >
+                                        OK
+                                </Button>
+                                </Grid>
+                                <Grid item >
+                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                        press Enter
+                                </Typography>
+                                </Grid>
+                            </Grid>
+                        </motion.div>}
                     </Grid>
                 </Grid>
             </Container>
@@ -143,18 +245,52 @@ const Position = props => {
     return (
         <div>
             <Container>
-                <Grid container spacing={2}>
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            <spa>{props.number}. Choose the position you are applying</spa>
+                        </Typography>
+                    </Grid>
                     <Grid item xs={12}>
                         <FormControl fullWidth>
                             <Select
-                                variant="outlined"
-
+                                value={props.position}
+                                onChange={e => {
+                                    props.handler(e.target.value)
+                                }}
                             >
                                 <MenuItem value={1}>Content Writer</MenuItem>
                                 <MenuItem value={2}>Social media marketing</MenuItem>
                                 <MenuItem value={3}>Graphic designer</MenuItem>
                             </Select>
                         </FormControl>
+
+                        {(props.position === '') ? null : <motion.div
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ ease: "easeOut" }}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item >
+                                    <Button
+                                        style={{ marginTop: '8px' }}
+                                        endIcon={<Check />}
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={props.next}
+                                    >
+                                        OK
+                                </Button>
+                                </Grid>
+                                <Grid item >
+                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
+                                        press Enter
+                                </Typography>
+                                </Grid>
+                            </Grid>
+                        </motion.div>}
+
+
                     </Grid>
                 </Grid>
             </Container>
@@ -171,8 +307,20 @@ const Index = props => {
     const comp = () => {
         switch (state) {
             case 1:
-                return <Name number={state} name={props.name} handler={props.nameHandler} />
+                return <Name number={state} name={props.name} handler={props.nameHandler} next={nextQuestion} />
+            case 2:
+                return <Position number={state} position={props.position} handler={props.positionHandler} next={nextQuestion} />
+            case 3:
+                return <Email number={state} email={props.email} handler={props.emailHandler} next={nextQuestion} />
+            case 4:
+                return <Github number={state} github={props.github} handler={props.githubHandler} next={nextQuestion} />
+            case 5:
+                return <Linkedin number={state} linkedin={props.linkedin} handler={props.linkedinhandler} next={nextQuestion} />
         }
+    }
+
+    const nextQuestion = () => {
+        setState(state + 1)
     }
 
     return (
@@ -184,13 +332,21 @@ const Index = props => {
 
 const mapStateToProps = state => {
     return {
-        name: state.coreTeamForm.name
+        name: state.coreTeamForm.name,
+        position: state.coreTeamForm.position,
+        email: state.coreTeamForm.email,
+        github: state.coreTeamForm.githubId,
+        linkedin: state.coreTeamForm.linkedinId
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        nameHandler: (name) => { dispatch(nameHandle(name)) }
+        nameHandler: (name) => { dispatch(nameHandle(name)) },
+        positionHandler: (position) => { dispatch(positionHandle(position)) },
+        emailHandler: (email) => { dispatch(emailHandle(email)) },
+        githubHandler: (github) => { dispatch(githubHandle(github)) },
+        linkedinhandler: (linkedin) => { dispatch(linkedinHandle(linkedin)) }
     }
 }
 

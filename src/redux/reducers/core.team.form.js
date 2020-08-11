@@ -1,5 +1,9 @@
 import {
-    CORE_TEAM_NAME_CHANGE
+    CORE_TEAM_NAME_CHANGE,
+    CORE_TEAM_POSITION_CHANGE,
+    CORE_TEAM_EMAIL_CHANGE,
+    CORE_TEAM_GITHUB_CHANGE,
+    CORE_TEAM_LINKEDIN_CHANGE
 } from '../action.type'
 
 const initialState = {
@@ -7,7 +11,7 @@ const initialState = {
     position: '',
     email: '',
     githubId: '',
-    linkedinIn: ''
+    linkedinId: ''
 }
 
 export default (state = initialState, action) => {
@@ -16,6 +20,26 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 name: action.payload
+            }
+        case CORE_TEAM_POSITION_CHANGE:
+            return {
+                ...state,
+                position: action.payload
+            }
+        case CORE_TEAM_EMAIL_CHANGE:
+            return {
+                ...state,
+                email: action.payload
+            }
+        case CORE_TEAM_GITHUB_CHANGE:
+            return {
+                ...state,
+                githubId: action.payload
+            }
+        case CORE_TEAM_LINKEDIN_CHANGE:
+            return {
+                ...state,
+                linkedinId: action.payload
             }
 
         default:
