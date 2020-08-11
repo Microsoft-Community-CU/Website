@@ -5,6 +5,7 @@ import {
     CORE_TEAM_GITHUB_CHANGE,
     CORE_TEAM_LINKEDIN_CHANGE
 } from '../action.type'
+import Airtable from 'airtable'
 
 
 const nameHandle = name => {
@@ -39,6 +40,35 @@ const linkedinHandle = linkedin => {
     return {
         type: CORE_TEAM_LINKEDIN_CHANGE,
         payload: linkedin
+    }
+}
+
+const sybmitForm = (name, email, position, github, linkedin) => {
+    return dispactch => {
+        let base = new Airtable({
+            apiKey: process.env.REACT_APP_AIRTABLE_API_KEY
+        }).base(process.env.REACT_APP_BASE_NAME)
+
+        let pos
+
+        base('Table 1').create([{
+            "fields": {
+                "Name": name,
+                "Position": [pos],
+                "Email": email,
+                "Github Id": github,
+                "Linkdin Id": linkedin
+            }
+        }], (err, records) => {
+            if(err){
+                console.log(err)
+                return;
+            }
+            
+            records.forEach(function (record) {
+                console.log(record.getId());
+              });
+        })
     }
 }
 
