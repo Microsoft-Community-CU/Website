@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import {
     nameHandle,
     positionHandle,
@@ -56,6 +56,11 @@ const Name = props => {
                                 placeholder="Type your answer here"
                                 value={props.name}
                                 onChange={e => { props.handler(e.target.value) }}
+                                onKeyPress={e => {
+                                    if (e.key === 'Enter') {
+                                        props.next();
+                                    }
+                                }}
                             />
                         </FormControl>
 
@@ -112,8 +117,14 @@ const Email = props => {
                         <FormControl fullWidth>
                             <TextField
                                 placeholder="Type your answer here"
+                                type="email"
                                 value={props.email}
                                 onChange={e => { props.handler(e.target.value) }}
+                                onKeyPress={e => {
+                                    if (e.key === 'Enter') {
+                                        props.next();
+                                    }
+                                }}
                             />
                         </FormControl>
 
@@ -170,6 +181,11 @@ const Github = props => {
                                 placeholder="Type your answer here"
                                 value={props.github}
                                 onChange={e => { props.handler(e.target.value) }}
+                                onKeyPress={e => {
+                                    if (e.key === 'Enter') {
+                                        props.next();
+                                    }
+                                }}
                             />
                         </FormControl>
 
@@ -226,6 +242,11 @@ const Linkedin = props => {
                                 placeholder="Type your answer here"
                                 value={props.linkedin}
                                 onChange={e => { props.handler(e.target.value) }}
+                                onKeyPress={e => {
+                                    if (e.key === 'Enter') {
+                                        props.next();
+                                    }
+                                }}
                             />
                         </FormControl>
 
@@ -307,11 +328,6 @@ const Position = props => {
                                         OK
                                 </Button>
                                 </Grid>
-                                <Grid item >
-                                    <Typography style={{ marginTop: '14px', fontSize: '12px' }}>
-                                        press Enter
-                                </Typography>
-                                </Grid>
                             </Grid>
                         </motion.div>}
 
@@ -324,8 +340,49 @@ const Position = props => {
 }
 
 const Complete = props => {
+    let history = useHistory()
 
-    return <Redirect path="/" />
+    let complete = () => {
+
+
+        history.goBack()
+    }
+
+    return (
+        <div>
+            <motion.div
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut" }}
+            >
+                <Grid container spacing={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5">
+                            Your Response Had been recorded
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12}>
+
+                        <Grid container spacing={2}>
+                            <Grid item >
+                                <Button
+                                    style={{ marginTop: '8px' }}
+                                    endIcon={<Check />}
+                                    variant="contained"
+                                    color="primary"
+                                    onClick={complete}
+                                >
+                                    OK
+                                </Button>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+            </motion.div>
+        </div>
+    )
 }
 
 const Index = props => {
