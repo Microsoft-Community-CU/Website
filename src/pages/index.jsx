@@ -34,10 +34,15 @@ const useStyle = makeStyles(theme => ({
         }
     },
     section: {
-        marginTop: theme.spacing(22),
+        marginTop: theme.spacing(32),
         marginBottom: theme.spacing(12),
         [theme.breakpoints.up('lg')]: {
             marginTop: theme.spacing(42)
+        }
+    },
+    title: {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '32px'
         }
     }
 }))
@@ -57,7 +62,7 @@ const Index = props => {
 
                     <Grid item xs={12}>
 
-                        <Typography align="center" variant="h2" >
+                        <Typography align="center" variant="h2" className={classes.title} >
                             Microsoft Comunity CU
                         </Typography>
 
@@ -70,7 +75,8 @@ const Index = props => {
                             animate={{ opacity: 1 }}
                             transition={{
                                 delay: 0,
-                                duration: 1
+                                duration: 1,
+                                ease: 'easeIn'
                             }}
                         >
                             <Typography align="center">
@@ -87,7 +93,8 @@ const Index = props => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
                                 delay: 1,
-                                duration: 1
+                                duration: 1,
+                                ease: 'easeOut'
                             }}
                         >
                             <center>
