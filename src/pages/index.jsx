@@ -12,6 +12,7 @@ import {
 
 // importing images 
 import Logo from '../images/logo.svg'
+import Aboutus from '../images/about_us.svg'
 
 const useStyle = makeStyles(theme => ({
     root: {
@@ -53,69 +54,77 @@ const Index = props => {
         <div className={classes.root}>
             <Container>
                 <Grid container spacing={4}>
+
                     <Grid item xs={12}>
-                        <center>
-                            <motion.div
-                                initial={{ opacity: 0, y: -100 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    delay: 1,
-                                    duration: 1
-                                }}
-                            >
-                                <img src={Logo} alt="" className={classes.logo} />
-                            </motion.div>
-                        </center>
+
+                        <Typography align="center" variant="h2" >
+                            Microsoft Comunity CU
+                        </Typography>
+
                     </Grid>
+
                     <Grid item xs={12}>
+
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
-                                delay: 2,
+                                delay: 0,
                                 duration: 1
                             }}
                         >
-                            <Typography align="center" variant="h6">
-                                Presents
+                            <Typography align="center">
+                                Presented by
                         </Typography>
                         </motion.div>
+
                     </Grid>
+
+                    <Grid item xs={12}>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{
+                                delay: 1,
+                                duration: 1
+                            }}
+                        >
+                            <center>
+                                <img src={Logo} alt="" width="40%" />
+                            </center>
+                        </motion.div>
+
+                    </Grid>
+
                 </Grid>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 3,
-                        duration: 1
-                    }}
-                >
-                    <Grid container spacing={1} className={classes.mtSmall}>
+                <div className={classes.section}>
+                    <Grid container spacing={4}>
+
                         <Grid item xs={12}>
                             <Typography align="center" variant="h3">
-                                Microsoft Community<br />
-                                <span style={{ color: 'red' }}>Chandigarh</span> University
-                        </Typography>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{
-                                    delay: 4,
-                                    duration: 1
-                                }}
-                            >
-                                <Typography align="center" variant="h6">
-                                    Be a force for good-locally and globally
-                        </Typography>
-                            </motion.div>
-                        </Grid>
+                                About us
+                            </Typography>
+                        </Grid> 
 
+                        <Grid xs={12} sm={6}>
+                            <img src={Aboutus} alt="" width="100%" />
 
-                    </Grid>
-                </motion.div>
+                        </Grid>
+                        <Grid xs={12} sm={6} style={{padding: '4px'}}>
+                            <Typography variant="h5" >
+                            Microsoft Community-CU 
+                            </Typography>
+                            <Typography>
+                            is powered by Alpha Learn Student ambassadors and a group of volunteers. Our main goal is to make people achieve more.
+                            </Typography>
+
+                        </Grid>
+                        
+                    </Grid>  
+
+                </div>
 
 
 
