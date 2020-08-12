@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useHistory } from 'react-router-dom'
 
 import {
     Container,
@@ -14,7 +15,7 @@ import Logo from '../images/logo.svg'
 
 const useStyle = makeStyles(theme => ({
     root: {
-        marginTop: theme.spacing(22),
+        marginTop: theme.spacing(18),
         [theme.breakpoints.up('lg')]: {
             marginTop: theme.spacing(32)
         }
@@ -40,6 +41,10 @@ const useStyle = makeStyles(theme => ({
 
 const Index = props => {
     const classes = useStyle()
+    const history = useHistory()
+    const router = path => {
+        history.push(path)
+    }
 
     return (
         <div className={classes.root}>
@@ -86,8 +91,8 @@ const Index = props => {
                     <Grid container spacing={1} className={classes.mtSmall}>
                         <Grid item xs={12}>
                             <Typography align="center" variant="h3">
-                                Microsoft Community<br/>
-                                <span style={{color:'red'}}>Chandigarh</span> University
+                                Microsoft Community<br />
+                                <span style={{ color: 'red' }}>Chandigarh</span> University
                         </Typography>
                         </Grid>
                         <Grid item xs={12}>
@@ -117,14 +122,20 @@ const Index = props => {
                             <Typography variant="h4" align="center">
                                 Core Team Applications Open
                             </Typography>
-                            
+
                         </Grid>
 
                         <Grid item xs={12}>
-                            <Typography variant="h5" align="center" color="primary">
+                            <Typography
+                                variant="h5"
+                                align="center"
+                                color="primary"
+                                onClick={() => { router('/coreform') }}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 Apply now
                             </Typography>
-                            
+
                         </Grid>
                     </Grid>
                 </div>
