@@ -13,15 +13,16 @@ import {
 // importing images 
 import Logo from '../images/logo.svg'
 import Aboutus from '../images/about_us.svg'
+import techPhantom from '../images/tech_phantom.svg'
 
 const useStyle = makeStyles(theme => ({
     root: {
-        marginTop: theme.spacing(18),
+        marginTop: theme.spacing(12),
         [theme.breakpoints.up('lg')]: {
-            marginTop: theme.spacing(32)
+            marginTop: theme.spacing(22)
         },
         [theme.breakpoints.down('sm')]: {
-            marginTop: theme.spacing(8)
+            marginTop: theme.spacing(4)
         }
     },
     mtSmall: {
@@ -62,9 +63,9 @@ const Index = props => {
 
                     <Grid item xs={12}>
 
-                        <Typography align="center" variant="h2" className={classes.title} >
-                            Microsoft Comunity CU
-                        </Typography>
+                        <center>
+                            <img src={techPhantom} alt="" width="280px"/>
+                        </center>
 
                     </Grid>
 
@@ -98,7 +99,7 @@ const Index = props => {
                             }}
                         >
                             <center>
-                                <img src={Logo} alt="" width="40%" />
+                                <img src={Logo} alt="" width="225px" />
                             </center>
                         </motion.div>
 
