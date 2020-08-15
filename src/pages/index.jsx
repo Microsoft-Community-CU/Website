@@ -17,7 +17,7 @@ import {
 import Logo from '../images/logo.svg'
 import Aboutus from '../images/about_us.jpg'
 import techPhantom from '../images/tech_phantom.svg'
-
+import whatwedo from '../images/whatwedo.jpg'
 const useStyle = makeStyles(theme => ({
     root: {
         marginTop: theme.spacing(12),
@@ -143,8 +143,8 @@ const Index = props => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
-                        delay: 4,
-                        duration: 1,
+                        delay: 1,
+                        duration: 2,
                         ease: 'easeOut'
                     }}
                 >
@@ -152,9 +152,9 @@ const Index = props => {
                     <div className={classes.section} >
                         <Grid container spacing={4}>
 
-                            <Grid item xs={12}>
+                            <Grid item xs={12} >
                                 <Typography align="left" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI' }}> About Us</span>
+                                    <span style={{ fontFamily: 'Segoe UI'}}> About Us👨‍💻</span>
                                 </Typography>
                             </Grid>
 
@@ -164,13 +164,52 @@ const Index = props => {
                                 </center>
                             </Grid>
                             <Grid xs={12} sm={6} style={{ padding: '4px' }}>
-                                <Typography variant="h5" >
-                                    Tech Phantoms
-                            </Typography>
-                                <Typography style={{ padding: '5px' }}>
+                             
+                                <Typography style={{ textAlign:'justify',paddingLeft:'18px',paddingRight:'18px'  }}>
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
-                                        is powered by <b>Microsoft Learn Student Ambassadors</b> and a group of volunteers.
-                                With an objective of making people achieve more, we organize various events, hackathons,
+                                    With this imagination, we came up with the idea of <h2>Tech Phantoms</h2> Armed with a vision to <i>“make people achieve more”</i>, 
+                                    Tech Phantoms is a community in cooperation with <b>Microsoft Learn Student Ambassadors</b>, where we aim at developing a teaching –learning environment 
+                                    for everyone who has that charisma for technology. An environment where you can collaborate, share and learn from the experts.
+                            </span>
+                                </Typography>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </div>
+
+                    <div className={classes.section}>
+                        <Grid container spacing={4}>
+
+                            <Grid item xs={12}>
+                                <Typography align="left" variant="h2">
+                                    <span style={{ fontFamily: 'Segoe UI'}}> What We Do 🙋‍♂️</span>
+                                </Typography>
+                            </Grid>
+
+                            <Grid xs={12} sm={6}>
+                                <center>
+                                    <img src={whatwedo} alt="" width="90%" style={{ borderRadius: '5px' }} />
+                                </center>
+                            </Grid>
+                            <Grid xs={12} sm={6} style={{ padding: '4px' }}>
+                             
+                                <Typography style={{ padding: '5px',textAlign: 'justify',paddingLeft:'18px',paddingRight:'18px'  }}>
+                                    <span style={{ fontFamily: 'Segoe UI', marginLeft:'4px'}}>
+                                    We try to bring innovation into action by providing the best resources to the members as we believe technology
+                                     is the best force for innovation. No matter you have technical knowledge or not. <b>Just a zeal to learn is enough.</b>
+                                     We aim at bringing diverse ideas together and create an engagement which would challenge and stretch our thinking.
+<ul style={{textAlign:'left',background:'#5c2d91',padding:'3px',listStyleType:'none',color:'white',borderRadius:'5px'}}>
+     <li style={{background:'#5c2d91',padding:'3px'}}> <b>Self-Improvement:</b> Set of programs that enhance the knowledge of members.
+     </li><li style={{background:'#5c2d91',padding:'3px'}}><b>Skill Accelerator:</b> By devising a series of workshops that engage developers and experts to help the developers work upon their sills.
+     </li><li style={{background:'#5c2d91',padding:'3px'}}><b>Product Innovation:</b> A product collaboration initiative to let members have hands on experience with technologies.
+     </li>
+</ul>
+We commit to becoming a place where people, passionate about technology, collaborate and aim at enhancing 
+their knowledge about the latest developer technologies and use them creatively and ethically.
+ And this we aim at doing by series of workshops, events, programs and services which will help the academics and research world. 
+                            
                             </span>
                                 </Typography>
 
@@ -182,14 +221,24 @@ const Index = props => {
 
 
 
+
+
                     <div className={classes.section}>
 
 
 
                         <Grid container spacing={2}>
+
+                        <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61'}}>
+                                <Typography align="center" variant="h2">
+                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}>Volunteer</span>
+                                </Typography>
+                            </Grid>
                             <Grid item xs={12}>
-                                <Typography variant="h4" align="center">
-                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> We are accepting applications for Core Team </span>
+                                <Typography variant="h6" align="center">
+                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> 
+                                    Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
+                                    <br/><br/>We are accepting applications for Core Team </span>
                                 </Typography>
 
                             </Grid>
