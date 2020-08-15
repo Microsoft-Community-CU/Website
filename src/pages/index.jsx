@@ -5,6 +5,7 @@ import Tada from 'react-reveal/Tada';
 import Flash from 'react-reveal/Flash';
 import { AwesomeButton } from "react-awesome-button";
 import stylesButton from 'react-awesome-button/src/styles/themes/theme-blue';
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import {
     Container,
     makeStyles,
@@ -62,6 +63,7 @@ const Index = props => {
 
     return (
         <div className={classes.root}  >
+    
             <Container>
                 <Grid container spacing={3}>
 
@@ -152,9 +154,9 @@ const Index = props => {
                     <div className={classes.section} >
                         <Grid container spacing={4}>
 
-                            <Grid item xs={12} >
-                                <Typography align="left" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI'}}> About Us👨‍💻</span>
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61',marginBottom:'5px'}} >
+                                <Typography align="center" variant="h2">
+                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}> About Us👨‍💻</span>
                                 </Typography>
                             </Grid>
 
@@ -163,14 +165,14 @@ const Index = props => {
                                     <img src={Aboutus} alt="" width="90%" style={{ borderRadius: '5px' }} />
                                 </center>
                             </Grid>
-                            <Grid xs={12} sm={6} style={{ padding: '4px' }}>
+                            <Grid xs={12} sm={6} >
                              
-                                <Typography style={{ textAlign:'justify',paddingLeft:'18px',paddingRight:'18px'  }}>
+                                <Typography style={{ paddingTop:'12px',paddingBottom:'18px',width:'90%',textAlign:'justify',paddingLeft:'18px',paddingRight:'18px',background:'white', borderRadius: '5px'  }}>
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
                                     With this imagination, we came up with the idea of <h2>Tech Phantoms</h2> Armed with a vision to <i>“make people achieve more”</i>, 
                                     Tech Phantoms is a community in cooperation with <b>Microsoft Learn Student Ambassadors</b>, where we aim at developing a teaching –learning environment 
                                     for everyone who has that charisma for technology. An environment where you can collaborate, share and learn from the experts.
-                            </span>
+                                    </span>
                                 </Typography>
 
                             </Grid>
@@ -182,9 +184,9 @@ const Index = props => {
                     <div className={classes.section}>
                         <Grid container spacing={4}>
 
-                            <Grid item xs={12}>
-                                <Typography align="left" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI'}}> What We Do 🙋‍♂️</span>
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61',marginBottom:'5px'}} >
+                                <Typography align="center" variant="h2">
+                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}> What We Do 🙋‍♂️</span>
                                 </Typography>
                             </Grid>
 
@@ -195,7 +197,7 @@ const Index = props => {
                             </Grid>
                             <Grid xs={12} sm={6} style={{ padding: '4px' }}>
                              
-                                <Typography style={{ padding: '5px',textAlign: 'justify',paddingLeft:'18px',paddingRight:'18px'  }}>
+                                <Typography style={{ padding: '5px',textAlign: 'justify',paddingLeft:'18px',paddingRight:'18px',background:'white', borderRadius: '5px' }}>
                                     <span style={{ fontFamily: 'Segoe UI', marginLeft:'4px'}}>
                                     We try to bring innovation into action by providing the best resources to the members as we believe technology
                                      is the best force for innovation. No matter you have technical knowledge or not. <b>Just a zeal to learn is enough.</b>
@@ -229,7 +231,7 @@ their knowledge about the latest developer technologies and use them creatively 
 
                         <Grid container spacing={2}>
 
-                        <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61'}}>
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61'}}>
                                 <Typography align="center" variant="h2">
                                     <span style={{ fontFamily: 'Segoe UI',color:'white'}}>Volunteer</span>
                                 </Typography>
