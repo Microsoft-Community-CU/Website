@@ -22,7 +22,7 @@ const useStyle = makeStyles(theme => ({
     root: {
         marginTop: theme.spacing(12),
         [theme.breakpoints.up('lg')]: {
-            marginTop: theme.spacing(8)
+            marginTop: theme.spacing(22)
         },
         [theme.breakpoints.down('sm')]: {
             marginTop: theme.spacing(4)
@@ -42,7 +42,7 @@ const useStyle = makeStyles(theme => ({
         marginBottom: theme.spacing(12),
 
         [theme.breakpoints.up('lg')]: {
-            marginTop: theme.spacing(42)
+            marginTop: theme.spacing(32)
         }
     },
     title: {

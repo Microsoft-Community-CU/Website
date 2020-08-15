@@ -28,11 +28,11 @@ const Navbar = props => {
             <AppBar color="transparent" elevation="0" position="sticky">
                 <Toolbar>
                     <div className={classes.root} />
-                    <IconButton
+                    {/* <IconButton
                     onClick={props.toggleDrawer}
                     >
                         <Menu />
-                    </IconButton>
+                    </IconButton> */}
                 </Toolbar>
             </AppBar>
         </div>
