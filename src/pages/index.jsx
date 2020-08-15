@@ -40,7 +40,7 @@ const useStyle = makeStyles(theme => ({
     section: {
         marginTop: theme.spacing(12),
         marginBottom: theme.spacing(12),
-       
+
         [theme.breakpoints.up('lg')]: {
             marginTop: theme.spacing(42)
         }
@@ -68,25 +68,25 @@ const Index = props => {
                     <Grid item xs={12}>
 
                         <center>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: 0,
-                                duration: 1,
-                                ease: 'easeIn'
-                            }}
-                        >
-                            <Tada>
-                            <img src={techPhantom} alt=""/>
-                            </Tada>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: 0,
+                                    duration: 1,
+                                    ease: 'easeIn'
+                                }}
+                            >
+                                <Tada>
+                                    <img src={techPhantom} alt="" />
+                                </Tada>
                             </motion.div>
                         </center>
 
                     </Grid>
 
                     <Grid item xs={12}>
-                    <motion.div
+                        <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
@@ -96,8 +96,8 @@ const Index = props => {
                             }}
                         >
                             <Typography align="center" >
-                              <span style={{color:'#969090',fontFamily:'Segoe UI'}}> A Techinal Community</span>
-                        </Typography>
+                                <span style={{ color: '#969090', fontFamily: 'Segoe UI' }}> A Techinal Community</span>
+                            </Typography>
                         </motion.div>
 
                         <motion.div
@@ -110,29 +110,29 @@ const Index = props => {
                             }}
                         >
                             <Typography align="center">
-                            <span style={{color:'#969090',fontFamily:'Segoe UI'}}> Presented By</span>
-                        </Typography>
+                                <span style={{ color: '#969090', fontFamily: 'Segoe UI' }}> Presented By</span>
+                            </Typography>
                         </motion.div>
 
                     </Grid>
 
                     <Grid item xs={12}>
-                    <Flash>
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 3,
-                                duration: 1,
-                                ease: 'easeOut'
-                            }}
-                        >
-                            <center>
-                            
-                                <img src={Logo} alt="" width="225px" />
-                               
-                            </center>
-                        </motion.div>
+                        <Flash>
+                            <motion.div
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    delay: 3,
+                                    duration: 1,
+                                    ease: 'easeOut'
+                                }}
+                            >
+                                <center>
+
+                                    <img src={Logo} alt="" width="225px" />
+
+                                </center>
+                            </motion.div>
                         </Flash>
 
                     </Grid>
@@ -140,81 +140,81 @@ const Index = props => {
                 </Grid>
 
                 <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 4,
-                                duration: 1,
-                                ease: 'easeOut'
-                            }}
-                        >
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        delay: 4,
+                        duration: 1,
+                        ease: 'easeOut'
+                    }}
+                >
 
-                <div className={classes.section} >
-                    <Grid container spacing={4}>
+                    <div className={classes.section} >
+                        <Grid container spacing={4}>
 
-                        <Grid item xs={12}>
-                            <Typography align="left" variant="h2">
-                            <span style={{fontFamily:'Segoe UI'}}> About Us</span>
+                            <Grid item xs={12}>
+                                <Typography align="left" variant="h2">
+                                    <span style={{ fontFamily: 'Segoe UI' }}> About Us</span>
+                                </Typography>
+                            </Grid>
+
+                            <Grid xs={12} sm={6}>
+                                <center>
+                                    <img src={Aboutus} alt="" width="90%" style={{ borderRadius: '5px' }} />
+                                </center>
+                            </Grid>
+                            <Grid xs={12} sm={6} style={{ padding: '4px' }}>
+                                <Typography variant="h5" >
+                                    Tech Phantoms
                             </Typography>
-                        </Grid> 
-
-                        <Grid xs={12} sm={6}>
-                            <center>
-                            <img src={Aboutus} alt="" width="90%" style={{borderRadius:'5px'}}/>
-                            </center>
-                        </Grid>
-                        <Grid xs={12} sm={6} style={{padding: '4px'}}>
-                            <Typography variant="h5" >
-                            Tech Phantoms 
-                            </Typography>
-                            <Typography style={{padding:'5px'}}>
-                            <span style={{fontFamily:'Segoe UI',textAlign:'justify'}}>
-                                is powered by <b>Microsoft Learn Student Ambassadors</b> and a group of volunteers. 
+                                <Typography style={{ padding: '5px' }}>
+                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
+                                        is powered by <b>Microsoft Learn Student Ambassadors</b> and a group of volunteers.
                                 With an objective of making people achieve more, we organize various events, hackathons,
                             </span>
-                            </Typography>
+                                </Typography>
 
-                        </Grid>
-                        
-                    </Grid>  
-
-                </div>
-
-
-
-                <div className={classes.section}>
-
-
-
-                    <Grid container spacing={2}>
-                        <Grid item xs={12}>
-                            <Typography variant="h4" align="center">
-                            <span style={{fontFamily:'Segoe UI',textAlign:'justify'}}> We are accepting applications for Core Team </span>
-                            </Typography>
+                            </Grid>
 
                         </Grid>
 
-                        <Grid item xs={12}>
-                            <Typography
-                                variant="h5"
-                                align="center"
-                                color="primary"
-                                onClick={() => { router('/coreform') }}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <AwesomeButton 
-      type="primary">
-                                Apply now
+                    </div>
+
+
+
+                    <div className={classes.section}>
+
+
+
+                        <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <Typography variant="h4" align="center">
+                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> We are accepting applications for Core Team </span>
+                                </Typography>
+
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Typography
+                                    variant="h5"
+                                    align="center"
+                                    color="primary"
+                                    onClick={() => { router('/coreform') }}
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    <AwesomeButton
+                                        type="primary">
+                                        Apply now
                                 </AwesomeButton>
-                            </Typography>
+                                </Typography>
 
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </div>
-            
-            </motion.div>
-            
-            
+                    </div>
+
+                </motion.div>
+
+
             </Container>
         </div>
     )
