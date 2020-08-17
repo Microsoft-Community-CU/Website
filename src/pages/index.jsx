@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import Tada from 'react-reveal/Tada';
 import Flash from 'react-reveal/Flash';
 import { AwesomeButton } from "react-awesome-button";
+import Countdown from "react-countdown";
 import stylesButton from 'react-awesome-button/src/styles/themes/theme-blue';
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import {
@@ -245,7 +246,7 @@ their knowledge about the latest developer technologies and use them creatively 
                                 <Typography variant="h6" align="center">
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> 
                                     Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
-                                    <br/><br/>We are accepting applications for Core Team </span>
+                                    <br/><br/>We are accepting applications for Core Team <span style={{color:'red'}}> <br/> Deadline for Core Team Applications:<Countdown date={'2020-08-18T13:00:00'} /></span></span>
                                 </Typography>
 
                             </Grid>
@@ -269,7 +270,7 @@ their knowledge about the latest developer technologies and use them creatively 
                     </div>
 
                 </motion.div>
-                {console.log(time)}
+             
 
             </Container>
         </div>
