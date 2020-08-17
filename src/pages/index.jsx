@@ -19,6 +19,10 @@ import Logo from '../images/logo.svg'
 import Aboutus from '../images/about_us.jpg'
 import techPhantom from '../images/tech_phantom.svg'
 import whatwedo from '../images/whatwedo.jpg'
+
+// custom hooks 
+import {useTimer} from '../hooks/timer'
+
 const useStyle = makeStyles(theme => ({
     root: {
         marginTop: theme.spacing(12),
@@ -60,6 +64,7 @@ const Index = props => {
     const router = path => {
         history.push(path)
     }
+    let time = useTimer()
 
     return (
         <div className={classes.root}  >
@@ -264,7 +269,7 @@ their knowledge about the latest developer technologies and use them creatively 
                     </div>
 
                 </motion.div>
-
+                {console.log(time)}
 
             </Container>
         </div>
