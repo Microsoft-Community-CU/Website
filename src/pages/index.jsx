@@ -246,7 +246,9 @@ their knowledge about the latest developer technologies and use them creatively 
                                 <Typography variant="h6" align="center">
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> 
                                     Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
-                                    <br/><br/>We are accepting applications for Core Team <span style={{color:'red'}}> <br/> We have extended the deadline for Core Team Applications:<br/> <Countdown date={'2020-08-18T23:59:59'} /></span></span>
+                                    <br/><br/>We will be rolling out for MEMBERS APPLICATIONS SOON.  <span style={{color:'red'}}> <br/> CORE TEAM APPLICATIONS CLOSED.<br/>
+                                     {/* <Countdown date={'2020-08-18T23:59:59'} /> */}
+                                     </span></span>
                                 </Typography>
 
                             </Grid>
@@ -259,10 +261,10 @@ their knowledge about the latest developer technologies and use them creatively 
                                     onClick={() => { router('/coreform') }}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    <AwesomeButton
+                                    {/* <AwesomeButton
                                         type="primary">
                                         Apply now
-                                </AwesomeButton>
+                                </AwesomeButton> */}
                                 </Typography>
 
                             </Grid>
