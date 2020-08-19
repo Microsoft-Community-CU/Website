@@ -247,9 +247,8 @@ their knowledge about the latest developer technologies and use them creatively 
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
                                         Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
                                     <br /><br />
-                                        {/* We will be rolling out for MEMBERS APPLICATIONS SOON.  <span style={{color:'red'}}> <br/> CORE TEAM APPLICATIONS CLOSED.<br/>
-                                     <Countdown date={'2020-08-18T23:59:59'} />
-                                     </span> */}
+                                        As to maintain quality, we are accepting very limited official members of Tech Phantoms.
+                                        <br/>Members Applications are LIVE.  
                                     </span>
                                 </Typography>
 
@@ -265,7 +264,7 @@ their knowledge about the latest developer technologies and use them creatively 
                                 >
                                     <AwesomeButton
                                         type="primary">
-                                        Apply now
+                                      Join Now
                                 </AwesomeButton>
                                 </Typography>
 
