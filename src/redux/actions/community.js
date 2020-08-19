@@ -4,6 +4,7 @@ import {
     COMMUNITY_COLLEGE_CHANGE,
     COMMUNITY_TECH_CHANGE
 } from '../action.type'
+import Airtable from 'airtable'
 
 const nameHandle = name => {
     return {

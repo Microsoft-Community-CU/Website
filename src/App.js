@@ -24,7 +24,7 @@ const App = props => {
             <Index />
           </Route>
 
-          <Route exact path="/coreform">
+          <Route exact path="/form">
             <Coreform />
           </Route>
         </Switch>

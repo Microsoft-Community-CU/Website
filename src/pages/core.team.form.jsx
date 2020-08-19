@@ -5,7 +5,7 @@ import {
     makeStyles
 } from '@material-ui/core'
 
-import Form from '../components/coreteam/forms'
+import Form from '../components/community/form'
 
 // importing images
 import Logo from '../images/Badge.png'
