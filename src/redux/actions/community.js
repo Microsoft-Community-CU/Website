@@ -26,14 +26,14 @@ const collegeHandle = college => {
     }
 }
 
-const techChange = tech => {
+const techHandle = tech => {
     return {
         type: COMMUNITY_TECH_CHANGE,
         payload: tech
     }
 }
 
-const sybmitForm = (name, email, college, tech) => {
+const submitForm = (name, email, college, tech) => {
     return dispactch => {
         let base = new Airtable({
             apiKey: process.env.REACT_APP_AIRTABLE_API_KEY
@@ -57,4 +57,13 @@ const sybmitForm = (name, email, college, tech) => {
             });
         })
     }
+}
+
+
+export {
+    nameHandle,
+    emailHandle,
+    collegeHandle,
+    techHandle,
+    submitForm
 }
