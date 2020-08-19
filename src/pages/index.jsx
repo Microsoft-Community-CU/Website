@@ -6,7 +6,7 @@ import Flash from 'react-reveal/Flash';
 import { AwesomeButton } from "react-awesome-button";
 import Countdown from "react-countdown";
 import stylesButton from 'react-awesome-button/src/styles/themes/theme-blue';
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import {
     Container,
     makeStyles,
@@ -22,7 +22,7 @@ import techPhantom from '../images/tech_phantom.svg'
 import whatwedo from '../images/whatwedo.jpg'
 
 // custom hooks 
-import {useTimer} from '../hooks/timer'
+import { useTimer } from '../hooks/timer'
 
 const useStyle = makeStyles(theme => ({
     root: {
@@ -69,7 +69,7 @@ const Index = props => {
 
     return (
         <div className={classes.root}  >
-    
+
             <Container>
                 <Grid container spacing={3}>
 
@@ -160,9 +160,9 @@ const Index = props => {
                     <div className={classes.section} >
                         <Grid container spacing={4}>
 
-                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61',marginBottom:'5px'}} >
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI', background: '#203a61', marginBottom: '5px' }} >
                                 <Typography align="center" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}> About Us👨‍💻</span>
+                                    <span style={{ fontFamily: 'Segoe UI', color: 'white' }}> About Us👨‍💻</span>
                                 </Typography>
                             </Grid>
 
@@ -172,11 +172,11 @@ const Index = props => {
                                 </center>
                             </Grid>
                             <Grid xs={12} sm={6} >
-                             
-                                <Typography style={{ paddingTop:'12px',paddingBottom:'18px',width:'90%',textAlign:'justify',paddingLeft:'18px',paddingRight:'18px',background:'white', borderRadius: '5px'  }}>
+
+                                <Typography style={{ paddingTop: '12px', paddingBottom: '18px', width: '90%', textAlign: 'justify', paddingLeft: '18px', paddingRight: '18px', background: 'white', borderRadius: '5px' }}>
                                     <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
-                                    With this imagination, we came up with the idea of <h2>Tech Phantoms</h2> Armed with a vision to <i>“make people achieve more”</i>, 
-                                    Tech Phantoms is a community in cooperation with <b>Microsoft Learn Student Ambassadors</b>, where we aim at developing a teaching –learning environment 
+                                        With this imagination, we came up with the idea of <h2>Tech Phantoms</h2> Armed with a vision to <i>“make people achieve more”</i>,
+                                    Tech Phantoms is a community in cooperation with <b>Microsoft Learn Student Ambassadors</b>, where we aim at developing a teaching –learning environment
                                     for everyone who has that charisma for technology. An environment where you can collaborate, share and learn from the experts.
                                     </span>
                                 </Typography>
@@ -190,9 +190,9 @@ const Index = props => {
                     <div className={classes.section}>
                         <Grid container spacing={4}>
 
-                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61',marginBottom:'5px'}} >
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI', background: '#203a61', marginBottom: '5px' }} >
                                 <Typography align="center" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}> What We Do 🙋‍♂️</span>
+                                    <span style={{ fontFamily: 'Segoe UI', color: 'white' }}> What We Do 🙋‍♂️</span>
                                 </Typography>
                             </Grid>
 
@@ -202,22 +202,22 @@ const Index = props => {
                                 </center>
                             </Grid>
                             <Grid xs={12} sm={6} style={{ padding: '4px' }}>
-                             
-                                <Typography style={{ padding: '5px',textAlign: 'justify',paddingLeft:'18px',paddingRight:'18px',background:'white', borderRadius: '5px' }}>
-                                    <span style={{ fontFamily: 'Segoe UI', marginLeft:'4px'}}>
-                                    We try to bring innovation into action by providing the best resources to the members as we believe technology
+
+                                <Typography style={{ padding: '5px', textAlign: 'justify', paddingLeft: '18px', paddingRight: '18px', background: 'white', borderRadius: '5px' }}>
+                                    <span style={{ fontFamily: 'Segoe UI', marginLeft: '4px' }}>
+                                        We try to bring innovation into action by providing the best resources to the members as we believe technology
                                      is the best force for innovation. No matter you have technical knowledge or not. <b>Just a zeal to learn is enough.</b>
                                      We aim at bringing diverse ideas together and create an engagement which would challenge and stretch our thinking.
-<ul style={{textAlign:'left',background:'#5c2d91',padding:'3px',listStyleType:'none',color:'white',borderRadius:'5px'}}>
-     <li style={{background:'#5c2d91',padding:'3px'}}> <b>Self-Improvement:</b> Set of programs that enhance the knowledge of members.
-     </li><li style={{background:'#5c2d91',padding:'3px'}}><b>Skill Accelerator:</b> By devising a series of workshops that engage developers and experts to help the developers work upon their sills.
-     </li><li style={{background:'#5c2d91',padding:'3px'}}><b>Product Innovation:</b> A product collaboration initiative to let members have hands on experience with technologies.
+<ul style={{ textAlign: 'left', background: '#5c2d91', padding: '3px', listStyleType: 'none', color: 'white', borderRadius: '5px' }}>
+                                            <li style={{ background: '#5c2d91', padding: '3px' }}> <b>Self-Improvement:</b> Set of programs that enhance the knowledge of members.
+     </li><li style={{ background: '#5c2d91', padding: '3px' }}><b>Skill Accelerator:</b> By devising a series of workshops that engage developers and experts to help the developers work upon their sills.
+     </li><li style={{ background: '#5c2d91', padding: '3px' }}><b>Product Innovation:</b> A product collaboration initiative to let members have hands on experience with technologies.
      </li>
-</ul>
-We commit to becoming a place where people, passionate about technology, collaborate and aim at enhancing 
+                                        </ul>
+We commit to becoming a place where people, passionate about technology, collaborate and aim at enhancing
 their knowledge about the latest developer technologies and use them creatively and ethically.
- And this we aim at doing by series of workshops, events, programs and services which will help the academics and research world. 
-                            
+ And this we aim at doing by series of workshops, events, programs and services which will help the academics and research world.
+
                             </span>
                                 </Typography>
 
@@ -237,18 +237,20 @@ their knowledge about the latest developer technologies and use them creatively 
 
                         <Grid container spacing={2}>
 
-                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI',background:'#203a61'}}>
+                            <Grid item xs={12} style={{ fontFamily: 'Segoe UI', background: '#203a61' }}>
                                 <Typography align="center" variant="h2">
-                                    <span style={{ fontFamily: 'Segoe UI',color:'white'}}>Volunteer</span>
+                                    <span style={{ fontFamily: 'Segoe UI', color: 'white' }}>Volunteer</span>
                                 </Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography variant="h6" align="center">
-                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}> 
-                                    Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
-                                    <br/><br/>We will be rolling out for MEMBERS APPLICATIONS SOON.  <span style={{color:'red'}}> <br/> CORE TEAM APPLICATIONS CLOSED.<br/>
-                                     {/* <Countdown date={'2020-08-18T23:59:59'} /> */}
-                                     </span></span>
+                                    <span style={{ fontFamily: 'Segoe UI', textAlign: 'justify' }}>
+                                        Be a force for good-locally and globally. Being in core team, will help you to network with top professionals from industry and getting nomination for upcoming student ambassasdors.
+                                    <br /><br />
+                                        {/* We will be rolling out for MEMBERS APPLICATIONS SOON.  <span style={{color:'red'}}> <br/> CORE TEAM APPLICATIONS CLOSED.<br/>
+                                     <Countdown date={'2020-08-18T23:59:59'} />
+                                     </span> */}
+                                    </span>
                                 </Typography>
 
                             </Grid>
@@ -258,13 +260,13 @@ their knowledge about the latest developer technologies and use them creatively 
                                     variant="h5"
                                     align="center"
                                     color="primary"
-                                    onClick={() => { router('/coreform') }}
+                                    onClick={() => { router('/form') }}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    {/* <AwesomeButton
+                                    <AwesomeButton
                                         type="primary">
                                         Apply now
-                                </AwesomeButton> */}
+                                </AwesomeButton>
                                 </Typography>
 
                             </Grid>
@@ -272,7 +274,7 @@ their knowledge about the latest developer technologies and use them creatively 
                     </div>
 
                 </motion.div>
-             
+
 
             </Container>
         </div>
