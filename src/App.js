@@ -8,6 +8,7 @@ import {
 // importing pages 
 import Index from './pages/index'
 import Coreform from './pages/core.team.form'
+import Team from './pages/team'
 
 // importing components
 import Navbar from './components/navbar'
@@ -26,6 +27,10 @@ const App = props => {
 
           <Route exact path="/form">
             <Coreform />
+          </Route>
+
+          <Route exact path="/team">
+            <Team />
           </Route>
         </Switch>
         <Drawer />
