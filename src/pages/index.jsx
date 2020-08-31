@@ -86,7 +86,7 @@ const Index = props => {
                                 }}
                             >
                                 <Tada>
-                                    <img src={techPhantom} alt="" />
+                                    <img src={techPhantom} alt="" width="30%" />
                                 </Tada>
                             </motion.div>
                         </center>
